@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Aethera Studio - Building the Eternal</title>
+  <meta name="title" content="Aethera Studio - Building the Eternal">
+  <meta name="description" content="Building platforms for brilliant minds, fearless makers, and thoughtful souls. We craft digital havens for deep work and pure flows.">
+  <meta name="keywords" content="Aethera Studio, digital agency, web design, creative studio, digital havens">
+  <meta name="author" content="Hubber Web">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aethera.newaihubber.com/">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aethera.newaihubber.com/">
+  <meta property="og:title" content="Aethera Studio - Building the Eternal">
+  <meta property="og:description" content="Building platforms for brilliant minds, fearless makers, and thoughtful souls.">
+  <meta property="og:site_name" content="Aethera Studio">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aethera Studio - Building the Eternal">
+  <meta name="twitter:description" content="Building platforms for brilliant minds, fearless makers, and thoughtful souls.">
+  
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✧</text></svg>">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Aethera Studio",
+    "description": "Building platforms for brilliant minds, fearless makers, and thoughtful souls.",
+    "url": "https://aethera.newaihubber.com",
+    "sameAs": ["https://twitter.com/hubberweb", "https://www.instagram.com/hubberai/"],
+    "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "email": "hello@hubberweb.com"}
+  }
+  </script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+    
+    .font-display {
+      font-family: 'Instrument Serif', serif;
+    }
+    
+    .demo-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      backdrop-filter: blur(10px);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.95);
+    }
+    
+    .demo-banner a {
+      color: #60a5fa;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .demo-banner a:hover {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+    
+    .demo-banner .cta-button {
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      color: white !important;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      margin-left: 0.5rem;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+    }
+    
+    .demo-banner .cta-button:hover {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      transform: translateY(-1px);
+    }
+    
+    .container {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    nav {
+      position: fixed;
+      top: 36px;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.5rem 2rem;
+    }
+    
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.875rem;
+      letter-spacing: -0.025em;
+      color: #000000;
+    }
+    
+    .logo sup {
+      font-size: 0.5em;
+      vertical-align: super;
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      font-size: 0.875rem;
+      color: #6F6F6F;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: #000000;
+    }
+    
+    .nav-links a.active {
+      color: #000000;
+    }
+    
+    .btn-primary {
+      background: #000000;
+      color: #ffffff;
+      padding: 0.625rem 1.5rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 6rem;
+      left: 1rem;
+      right: 1rem;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      z-index: 99;
+    }
+    
+    .mobile-menu.open {
+      display: block;
+    }
+    
+    .mobile-menu a {
+      display: block;
+      padding: 0.75rem 0;
+      color: #6F6F6F;
+      text-decoration: none;
+      font-size: 1rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+    
+    .mobile-menu .btn-primary {
+      width: 100%;
+      margin-top: 1rem;
+    }
+    
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 1.5rem 10rem;
+    }
+    
+    .video-container {
+      position: absolute;
+      top: 300px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+    
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .video-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, #ffffff 0%, transparent 20%, transparent 80%, #ffffff 100%);
+      pointer-events: none;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+    
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -2.46px;
+      color: #000000;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero h1 em {
+      font-style: italic;
+      color: #6F6F6F;
+    }
+    
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: #6F6F6F;
+      max-width: 42rem;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+    
+    @keyframes fadeRise {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-rise {
+      animation: fadeRise 0.8s ease-out forwards;
+    }
+    
+    .animate-fade-rise-delay {
+      animation: fadeRise 0.8s ease-out forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
+    }
+    
+    .animate-fade-rise-delay-2 {
+      animation: fadeRise 0.8s ease-out forwards;
+      animation-delay: 0.4s;
+      opacity: 0;
+    }
+    
+    .section {
+      padding: 6rem 1.5rem;
+    }
+    
+    .section-light {
+      background: #ffffff;
+    }
+    
+    .section-gray {
+      background: #f9fafb;
+    }
+    
+    .section h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-content {
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+    
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+    
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .card h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #000000;
+      margin-bottom: 1rem;
+    }
+    
+    .card p {
+      color: #6F6F6F;
+      line-height: 1.7;
+    }
+    
+    .stat-number {
+      font-family: 'Instrument Serif', serif;
+      font-size: 3rem;
+      color: #000000;
+    }
+    
+    .stat-label {
+      color: #6F6F6F;
+      margin-top: 0.5rem;
+    }
+    
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .journal-card {
+      cursor: pointer;
+    }
+    
+    .journal-card .image {
+      height: 12rem;
+      background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    
+    .journal-card:hover .image {
+      transform: scale(1.03);
+    }
+    
+    .journal-card .category {
+      font-size: 0.875rem;
+      color: #6F6F6F;
+    }
+    
+    .journal-card h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      color: #000000;
+      margin-top: 0.5rem;
+    }
+    
+    .journal-card:hover h3 {
+      text-decoration: underline;
+    }
+    
+    .journal-card p {
+      font-size: 0.875rem;
+      color: #6F6F6F;
+      margin-top: 0.5rem;
+    }
+    
+    .cta-section {
+      text-align: center;
+    }
+    
+    .cta-section p {
+      font-size: 1.125rem;
+      color: #6F6F6F;
+      margin-bottom: 2rem;
+    }
+    
+    .cta-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .cta-links a {
+      font-size: 0.875rem;
+      color: #6F6F6F;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .cta-links a:hover {
+      color: #000000;
+    }
+    
+    footer {
+      background: #000000;
+      color: #ffffff;
+      padding: 3rem 1.5rem;
+    }
+    
+    footer .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+    
+    footer .logo {
+      color: #ffffff;
+    }
+    
+    footer .tagline {
+      color: #9ca3af;
+      margin-top: 0.5rem;
+    }
+    
+    footer .credit {
+      color: #9ca3af;
+      font-size: 0.875rem;
+    }
+    
+    footer .credit a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    
+    footer .credit a:hover {
+      text-decoration: underline;
+    }
+    
+    footer .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    footer .footer-links a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    
+    footer .footer-links a:hover {
+      color: #ffffff;
+    }
+    
+    footer .copyright {
+      border-top: 1px solid #1f2937;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.875rem;
+      width: 100%;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-banner">
+    <span>✧ This is a demo website created by</span>
+    <a href="https://newaihubber.com" target="_blank" rel="noopener noreferrer">Hubber Web</a>
+    <span>— Premium website design agency for coaches, consultants & course creators.</span>
+    <a href="https://newaihubber.com" target="_blank" rel="noopener noreferrer" class="cta-button">Visit Hubber Web →</a>
+  </div>
+
+  <nav>
+    <div class="container">
+      <a href="#home" class="logo">Aethera<sup>®</sup></a>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#studio">Studio</a>
+        <a href="#about">About</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Reach Us</a>
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Begin Journey</button>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#home" onclick="closeMobileMenu()">Home</a>
+    <a href="#studio" onclick="closeMobileMenu()">Studio</a>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#journal" onclick="closeMobileMenu()">Journal</a>
+    <a href="#contact" onclick="closeMobileMenu()">Reach Us</a>
+    <button class="btn-primary" onclick="closeMobileMenu(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Begin Journey</button>
+  </div>
+
+  <section id="home" class="hero">
+    <div class="video-container">
+      <video id="hero-video" muted playsInline>
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_083109_283f3553-e28f-428b-a723-d639c617eb2b.mp4" type="video/mp4">
+      </video>
+      <div class="video-gradient"></div>
+    </div>
+    
+    <div class="hero-content">
+      <h1 class="animate-fade-rise">
+        Beyond silence, we build <em>the eternal.</em>
+      </h1>
+      <p class="animate-fade-rise-delay">
+        Building platforms for brilliant minds, fearless makers, and thoughtful souls. 
+        Through the noise, we craft digital havens for deep work and pure flows.
+      </p>
+      <button class="btn-primary animate-fade-rise-delay-2" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        Begin Journey
+      </button>
+    </div>
+  </section>
+
+  <section id="studio" class="section section-light">
+    <div class="section-content">
+      <h2>Our Studio</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Creative Vision</h3>
+          <p>We believe in the power of thoughtful design. Every pixel, every interaction, every moment is crafted 
+            with intention. Our studio specializes in creating digital experiences that resonate with brilliant minds 
+            who value substance over noise.</p>
+        </div>
+        <div class="card">
+          <h3>What We Build</h3>
+          <p>From intimate personal portfolios to comprehensive platform experiences, we build digital spaces that 
+            enable deep work. Our approach combines aesthetic excellence with functional precision, creating tools 
+            that inspire and empower.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section section-gray">
+    <div class="section-content">
+      <h2>About Aethera</h2>
+      <p style="text-align: center; max-width: 48rem; margin: 0 auto 4rem; color: #6F6F6F; font-size: 1.125rem; line-height: 1.7;">
+        Aethera Studio was born from a simple observation: the best work happens in silence, in spaces designed 
+        for focus and flow. We exist to build those spaces—digital sanctuaries where brilliant minds can do their 
+        most meaningful work.
+      </p>
+      <div class="grid-4">
+        <div style="text-align: center;">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div style="text-align: center;">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Creative Possibilities</div>
+        </div>
+        <div style="text-align: center;">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div style="text-align: center;">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Dreams Realized</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="journal" class="section section-light">
+    <div class="section-content">
+      <h2>Journal</h2>
+      <div class="journal-grid">
+        <article class="journal-card">
+          <div class="image"></div>
+          <div class="category">Design Philosophy</div>
+          <h3>The Art of Digital Silence</h3>
+          <p>Exploring how negative space creates meaning in digital experiences.</p>
+        </article>
+        <article class="journal-card">
+          <div class="image"></div>
+          <div class="category">Process</div>
+          <h3>Building for Flow States</h3>
+          <p>How we design interfaces that promote deep work and focus.</p>
+        </article>
+        <article class="journal-card">
+          <div class="image"></div>
+          <div class="category">Insights</div>
+          <h3>The Future of Digital Spaces</h3>
+          <p>Our vision for creating meaningful online experiences.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-gray cta-section">
+    <div class="section-content">
+      <h2>Begin Your Journey</h2>
+      <p>Ready to build something eternal? Let's create digital spaces that matter.</p>
+      <button class="btn-primary" style="padding: 1.25rem 3.5rem; font-size: 1rem;">
+        Reach Out
+      </button>
+      <div class="cta-links">
+        <a href="https://newaihubber.com" target="_blank" rel="noopener noreferrer">Website Design</a>
+        <a href="https://newaihubber.com/services" target="_blank" rel="noopener noreferrer">Our Services</a>
+        <a href="https://newaihubber.com/contact" target="_blank" rel="noopener noreferrer">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="logo">Aethera<sup>®</sup></div>
+        <div class="tagline">Building the eternal.</div>
+      </div>
+      <div class="credit">
+        Demo by <a href="https://newaihubber.com" target="_blank" rel="noopener noreferrer">Hubber Web</a>
+        <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #6b7280;">
+          Premium websites for coaches, consultants & creators
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#studio">Studio</a>
+        <a href="#about">About</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Reach Us</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Aethera Studio. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const video = document.getElementById('hero-video');
+    let animationId;
+    
+    function initVideoFade() {
+      if (!video) return;
+      
+      video.addEventListener('loadedmetadata', () => {
+        video.play().catch(err => {
+          console.log('Video autoplay blocked:', err);
+        });
+      });
+      
+      function handleFade() {
+        if (!video.duration) {
+          animationId = requestAnimationFrame(handleFade);
+          return;
+        }
+        
+        const currentTime = video.currentTime;
+        const duration = video.duration;
+        const fadeDuration = 0.5;
+        
+        if (currentTime < fadeDuration) {
+          video.style.opacity = Math.min(1, currentTime / fadeDuration);
+        } else if (duration - currentTime < fadeDuration) {
+          video.style.opacity = Math.max(0, (duration - currentTime) / fadeDuration);
+        } else if (video.style.opacity !== '1') {
+          video.style.opacity = '1';
+        }
+        
+        animationId = requestAnimationFrame(handleFade);
+      }
+      
+      video.addEventListener('ended', () => {
+        video.style.opacity = '0';
+        setTimeout(() => {
+          video.currentTime = 0;
+          video.play().catch(() => {});
+        }, 100);
+      });
+      
+      animationId = requestAnimationFrame(handleFade);
+    }
+    
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('open');
+    }
+    
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.remove('open');
+    }
+    
+    document.addEventListener('click', (e) => {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.querySelector('.mobile-menu-btn');
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+    
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+    
+    window.addEventListener('scroll', () => {
+      const sections = ['home', 'studio', 'about', 'journal', 'contact'];
+      const scrollPos = window.scrollY + 200;
+      
+      sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            const activeLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+            if (activeLink) activeLink.classList.add('active');
+          }
+        }
+      });
+    });
+    
+    initVideoFade();
+  </script>
+</body>
+</html>
