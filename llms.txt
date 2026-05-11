@@ -1,0 +1,42 @@
+# Aethera Studio - Building the Eternal
+
+Aethera Studio builds platforms for brilliant minds, fearless makers, and thoughtful souls. We craft digital havens for deep work and pure flows.
+
+## About
+
+- Digital creative studio
+- Premium web design and development
+- Building digital spaces for focus and flow
+- Based in India, serving worldwide
+
+## Services
+
+- Web Design & Development
+- Brand Identity
+- Digital Strategy
+- UI/UX Design
+
+## Technology
+
+- Modern web technologies
+- Responsive design
+- Performance optimization
+- SEO best practices
+
+## Contact
+
+- Website: https://aethera.newaihubber.com
+- Email: hello@hubberweb.com
+- Creator: Hubber Web - Premium websites for coaches, consultants & course creators
+
+## Source
+
+This demo website was created by Hubber Web (https://newaihubber.com) to showcase premium website design capabilities.
+
+## Pages
+
+- Home (Hero section with cinematic video)
+- Studio (Creative vision and services)
+- About (Company story and statistics)
+- Journal (Blog articles and insights)
+- Contact (Call to action and reach out)

@@ -1,0 +1,8 @@
+# https://robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+Sitemap: https://aethera.newaihubber.com/sitemap.xml
+
+Crawl-delay: 10

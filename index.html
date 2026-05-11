@@ -4,23 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Aethera Studio - Building the Eternal</title>
-  <meta name="title" content="Aethera Studio - Building the Eternal">
-  <meta name="description" content="Building platforms for brilliant minds, fearless makers, and thoughtful souls. We craft digital havens for deep work and pure flows.">
-  <meta name="keywords" content="Aethera Studio, digital agency, web design, creative studio, digital havens">
+  <title>Aethera Studio | Building the Eternal - Digital Creative Agency</title>
+  <meta name="title" content="Aethera Studio | Building the Eternal - Digital Creative Agency">
+  <meta name="description" content="Aethera Studio builds platforms for brilliant minds, fearless makers, and thoughtful souls. We craft digital havens for deep work and pure flows. Premium web design and digital experiences.">
+  <meta name="keywords" content="Aethera Studio, digital agency, web design studio, creative agency, digital design, UI UX design, brand identity, website development, digital strategy, portfolio design">
   <meta name="author" content="Hubber Web">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
   <link rel="canonical" href="https://aethera.newaihubber.com/">
   
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aethera.newaihubber.com/">
-  <meta property="og:title" content="Aethera Studio - Building the Eternal">
-  <meta property="og:description" content="Building platforms for brilliant minds, fearless makers, and thoughtful souls.">
+  <meta property="og:title" content="Aethera Studio | Building the Eternal">
+  <meta property="og:description" content="Building platforms for brilliant minds, fearless makers, and thoughtful souls. We craft digital havens for deep work and pure flows.">
   <meta property="og:site_name" content="Aethera Studio">
+  <meta property="og:locale" content="en_US">
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Aethera Studio - Building the Eternal">
+  <meta name="twitter:url" content="https://aethera.newaihubber.com/">
+  <meta name="twitter:title" content="Aethera Studio | Building the Eternal">
   <meta name="twitter:description" content="Building platforms for brilliant minds, fearless makers, and thoughtful souls.">
+  <meta name="twitter:creator" content="@hubberweb">
   
   <meta name="theme-color" content="#ffffff">
   
@@ -35,10 +39,44 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Aethera Studio",
-    "description": "Building platforms for brilliant minds, fearless makers, and thoughtful souls.",
+    "description": "Building platforms for brilliant minds, fearless makers, and thoughtful souls. We craft digital havens for deep work and pure flows.",
     "url": "https://aethera.newaihubber.com",
-    "sameAs": ["https://twitter.com/hubberweb", "https://www.instagram.com/hubberai/"],
-    "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "email": "hello@hubberweb.com"}
+    "logo": "https://aethera.newaihubber.com/logo.svg",
+    "sameAs": [
+      "https://twitter.com/hubberweb",
+      "https://www.instagram.com/hubberai/"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "hello@hubberweb.com",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "India"
+    },
+    "areaServed": "Worldwide"
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Aethera Studio",
+    "url": "https://aethera.newaihubber.com",
+    "description": "Building platforms for brilliant minds, fearless makers, and thoughtful souls.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hubber Web",
+      "url": "https://newaihubber.com"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://aethera.newaihubber.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
   
@@ -57,7 +95,7 @@
       font-family: 'Inter', sans-serif;
       background: #ffffff;
       color: #000000;
-      line-height: 1.5;
+      line-height: 1.6;
       overflow-x: hidden;
     }
     
@@ -73,6 +111,7 @@
       z-index: 1000;
       background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       padding: 0.75rem 1rem;
       display: flex;
       align-items: center;
@@ -123,6 +162,14 @@
       right: 0;
       z-index: 100;
       padding: 1.5rem 2rem;
+      background: transparent;
+      transition: background 0.3s;
+    }
+    
+    nav.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
     
     nav .container {
@@ -136,6 +183,7 @@
       font-size: 1.875rem;
       letter-spacing: -0.025em;
       color: #000000;
+      text-decoration: none;
     }
     
     .logo sup {
@@ -173,6 +221,8 @@
       border: none;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      display: inline-block;
     }
     
     .btn-primary:hover {
@@ -186,6 +236,7 @@
       border: none;
       cursor: pointer;
       padding: 0.5rem;
+      color: #000000;
     }
     
     .mobile-menu {
@@ -222,6 +273,7 @@
     .mobile-menu .btn-primary {
       width: 100%;
       margin-top: 1rem;
+      text-align: center;
     }
     
     .hero {
@@ -232,47 +284,60 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 8rem 1.5rem 10rem;
+      padding: 8rem 1.5rem 6rem;
     }
     
-    .video-container {
+    .video-wrapper {
       position: absolute;
-      top: 300px;
+      top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+      z-index: 0;
       overflow: hidden;
     }
     
-    .video-container video {
+    .video-wrapper video {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
       object-fit: cover;
     }
     
-    .video-gradient {
+    .video-overlay {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(to bottom, #ffffff 0%, transparent 20%, transparent 80%, #ffffff 100%);
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0.1) 30%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.1) 70%,
+        rgba(255,255,255,0.4) 100%
+      );
       pointer-events: none;
     }
     
     .hero-content {
       position: relative;
       z-index: 10;
+      max-width: 64rem;
     }
     
     .hero h1 {
       font-family: 'Instrument Serif', serif;
       font-size: clamp(2.5rem, 8vw, 5rem);
       font-weight: 400;
-      line-height: 0.95;
+      line-height: 1.05;
       letter-spacing: -2.46px;
       color: #000000;
       margin-bottom: 1.5rem;
@@ -287,8 +352,8 @@
       font-size: clamp(1rem, 2vw, 1.125rem);
       color: #6F6F6F;
       max-width: 42rem;
-      line-height: 1.7;
-      margin-bottom: 3rem;
+      line-height: 1.8;
+      margin: 0 auto 2rem;
     }
     
     @keyframes fadeRise {
@@ -372,7 +437,7 @@
     
     .card p {
       color: #6F6F6F;
-      line-height: 1.7;
+      line-height: 1.8;
     }
     
     .stat-number {
@@ -384,25 +449,32 @@
     .stat-label {
       color: #6F6F6F;
       margin-top: 0.5rem;
+      font-size: 0.875rem;
     }
     
     .journal-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
     
     .journal-card {
       cursor: pointer;
+      transition: transform 0.3s;
+    }
+    
+    .journal-card:hover {
+      transform: translateY(-4px);
     }
     
     .journal-card .image {
-      height: 12rem;
-      background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+      position: relative;
+      height: 14rem;
       border-radius: 1rem;
       margin-bottom: 1rem;
       overflow: hidden;
-      transition: transform 0.3s;
+      background-size: cover;
+      background-position: center;
     }
     
     .journal-card:hover .image {
@@ -412,13 +484,14 @@
     .journal-card .category {
       font-size: 0.875rem;
       color: #6F6F6F;
+      margin-bottom: 0.25rem;
     }
     
     .journal-card h3 {
       font-family: 'Instrument Serif', serif;
       font-size: 1.25rem;
       color: #000000;
-      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
     
     .journal-card:hover h3 {
@@ -428,7 +501,6 @@
     .journal-card p {
       font-size: 0.875rem;
       color: #6F6F6F;
-      margin-top: 0.5rem;
     }
     
     .cta-section {
@@ -543,6 +615,18 @@
       .grid-4 {
         grid-template-columns: repeat(2, 1fr);
       }
+      
+      .video-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.6) 0%,
+          rgba(255,255,255,0.2) 20%,
+          rgba(255,255,255,0) 40%,
+          rgba(255,255,255,0) 60%,
+          rgba(255,255,255,0.3) 80%,
+          rgba(255,255,255,0.7) 100%
+        );
+      }
     }
   </style>
 </head>
@@ -554,7 +638,7 @@
     <a href="https://newaihubber.com" target="_blank" rel="noopener noreferrer" class="cta-button">Visit Hubber Web →</a>
   </div>
 
-  <nav>
+  <nav id="navbar">
     <div class="container">
       <a href="#home" class="logo">Aethera<sup>®</sup></a>
       <div class="nav-links">
@@ -563,7 +647,7 @@
         <a href="#about">About</a>
         <a href="#journal">Journal</a>
         <a href="#contact">Reach Us</a>
-        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Begin Journey</button>
+        <a href="#contact" class="btn-primary">Begin Journey</a>
       </div>
       <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -581,15 +665,15 @@
     <a href="#about" onclick="closeMobileMenu()">About</a>
     <a href="#journal" onclick="closeMobileMenu()">Journal</a>
     <a href="#contact" onclick="closeMobileMenu()">Reach Us</a>
-    <button class="btn-primary" onclick="closeMobileMenu(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Begin Journey</button>
+    <a href="#contact" class="btn-primary" onclick="closeMobileMenu()">Begin Journey</a>
   </div>
 
   <section id="home" class="hero">
-    <div class="video-container">
+    <div class="video-wrapper">
       <video id="hero-video" muted playsInline>
         <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_083109_283f3553-e28f-428b-a723-d639c617eb2b.mp4" type="video/mp4">
       </video>
-      <div class="video-gradient"></div>
+      <div class="video-overlay"></div>
     </div>
     
     <div class="hero-content">
@@ -600,9 +684,7 @@
         Building platforms for brilliant minds, fearless makers, and thoughtful souls. 
         Through the noise, we craft digital havens for deep work and pure flows.
       </p>
-      <button class="btn-primary animate-fade-rise-delay-2" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-        Begin Journey
-      </button>
+      <a href="#contact" class="btn-primary animate-fade-rise-delay-2">Begin Journey</a>
     </div>
   </section>
 
@@ -629,7 +711,7 @@
   <section id="about" class="section section-gray">
     <div class="section-content">
       <h2>About Aethera</h2>
-      <p style="text-align: center; max-width: 48rem; margin: 0 auto 4rem; color: #6F6F6F; font-size: 1.125rem; line-height: 1.7;">
+      <p style="text-align: center; max-width: 48rem; margin: 0 auto 4rem; color: #6F6F6F; font-size: 1.125rem; line-height: 1.8;">
         Aethera Studio was born from a simple observation: the best work happens in silence, in spaces designed 
         for focus and flow. We exist to build those spaces—digital sanctuaries where brilliant minds can do their 
         most meaningful work.
@@ -660,19 +742,22 @@
       <h2>Journal</h2>
       <div class="journal-grid">
         <article class="journal-card">
-          <div class="image"></div>
+          <div class="image" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80');">
+          </div>
           <div class="category">Design Philosophy</div>
           <h3>The Art of Digital Silence</h3>
           <p>Exploring how negative space creates meaning in digital experiences.</p>
         </article>
         <article class="journal-card">
-          <div class="image"></div>
+          <div class="image" style="background-image: url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800&q=80');">
+          </div>
           <div class="category">Process</div>
           <h3>Building for Flow States</h3>
           <p>How we design interfaces that promote deep work and focus.</p>
         </article>
         <article class="journal-card">
-          <div class="image"></div>
+          <div class="image" style="background-image: url('https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?w=800&q=80');">
+          </div>
           <div class="category">Insights</div>
           <h3>The Future of Digital Spaces</h3>
           <p>Our vision for creating meaningful online experiences.</p>
@@ -685,9 +770,9 @@
     <div class="section-content">
       <h2>Begin Your Journey</h2>
       <p>Ready to build something eternal? Let's create digital spaces that matter.</p>
-      <button class="btn-primary" style="padding: 1.25rem 3.5rem; font-size: 1rem;">
+      <a href="https://newaihubber.com/contact" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 1.25rem 3.5rem; font-size: 1rem;">
         Reach Out
-      </button>
+      </a>
       <div class="cta-links">
         <a href="https://newaihubber.com" target="_blank" rel="noopener noreferrer">Website Design</a>
         <a href="https://newaihubber.com/services" target="_blank" rel="noopener noreferrer">Our Services</a>
@@ -699,7 +784,7 @@
   <footer>
     <div class="container">
       <div>
-        <div class="logo">Aethera<sup>®</sup></div>
+        <a href="#home" class="logo">Aethera<sup>®</sup></a>
         <div class="tagline">Building the eternal.</div>
       </div>
       <div class="credit">
@@ -779,21 +864,24 @@
     document.addEventListener('click', (e) => {
       const menu = document.getElementById('mobile-menu');
       const btn = document.querySelector('.mobile-menu-btn');
-      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
         menu.classList.remove('open');
       }
     });
     
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      });
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
     });
     
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = ['home', 'studio', 'about', 'journal', 'contact'];
+    
     window.addEventListener('scroll', () => {
-      const sections = ['home', 'studio', 'about', 'journal', 'contact'];
       const scrollPos = window.scrollY + 200;
       
       sections.forEach(sectionId => {
